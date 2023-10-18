@@ -19,4 +19,4 @@ app.use(shopRouter);
 
 
 app.use(notFoundController.notFound)
-app.listen(3000);
+app.listen(process.env.PORT || 3000);

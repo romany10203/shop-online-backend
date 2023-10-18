@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "Romany",
   "license": "ISC",
@@ -18,6 +21,7 @@
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
     "mysql2": "^3.6.2",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "sequelize": "^6.33.0"
   }
 }
