@@ -1,13 +1,12 @@
-let express=require('express');
-let path = require('path');
+const express = require('express');
+const path = require('path');
+const bodyParser=require('body-parser');
+const adminRouter= require('./routes/admin');
+const shopRouter = require('./routes/shop');
+const db = require('./util/database');
+const notFoundController=require('./controllers/404');
 
-let adminRouter= require('./routes/admin');
-let shopRouter = require('./routes/shop');
-let notFoundController=require('./controllers/404')
-
-let bodyParser=require('body-parser');
-
-let app=express();
+const app=express();
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');

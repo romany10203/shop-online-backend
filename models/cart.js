@@ -28,7 +28,7 @@ module.exports = class Cart{
                 product={id:id,quantity:1};
                 cart.products=[...cart.products,product];
             }
-            cart.totalPrice+= +price
+            cart.totalPrice += +price;
             fs.writeFile(p,JSON.stringify(cart),err=>{
                 if(err){
                     console.log(err);
@@ -48,7 +48,7 @@ module.exports = class Cart{
             if(index==-1){
                 return;
             }
-            updatedCart.totalPrice-=(price*updatedCart.products[index].quantity);
+            updatedCart.totalPrice -= price * updatedCart.products[index].quantity;
             updatedCart.products.splice(index,1);
             fs.writeFile(p,JSON.stringify(updatedCart),err=>{
                 if(err){
@@ -57,6 +57,7 @@ module.exports = class Cart{
             });
         });
     }
+
     static updatePrice(id,oldPrice,newPrice){
         fs.readFile(p,(err,data)=>{
             if(err || !data){
