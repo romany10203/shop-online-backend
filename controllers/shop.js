@@ -81,11 +81,12 @@ exports.getCheckout=(req,res,next) => {
 }
 
 exports.getIndex = (req,res,next) => {
-    Product.fetchAll()
-    .then(([products]) => {
-        res.render('shop/index',{
-            products:products,
-            docTitle:'Shop',
-            path:'/'});
-    }).catch(err => console.log(err));
+    // Product.fetchAll()
+    // .then(([products]) => {
+    //     res.render('shop/index',{
+    //         products:products,
+    //         docTitle:'Shop',
+    //         path:'/'});
+    // }).catch(err => console.log(err));
+    res.send("{done}");
 }
